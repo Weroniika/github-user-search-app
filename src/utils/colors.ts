@@ -24,3 +24,7 @@ export const neutral: ColorPalette = {
   500: "#141D2F",
   600: "#2B3442",
 };
+
+export const red = {
+  100: "#F74646",
+};

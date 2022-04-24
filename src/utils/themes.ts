@@ -19,7 +19,7 @@ export const defaultTheme: Theme = {
   primaryTextHoverColor: neutral[600]!,
   secondaryTextColor: neutral[600]!,
   primaryBackgroundColor: neutral[200],
-  secondaryBackgroundColor: neutral[300],
+  secondaryBackgroundColor: neutral[100],
   primaryFont,
 };
 
