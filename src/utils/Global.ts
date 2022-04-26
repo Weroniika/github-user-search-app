@@ -16,11 +16,17 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
     }
 
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
     
 
     @media only screen and (min-width: 48rem) {
         html {
-        //    font-size: 15px;
+          font-size: 16px;
         }
     }
 `;

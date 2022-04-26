@@ -18,7 +18,7 @@ export const defaultTheme: Theme = {
   primaryTextColor: blue[400],
   primaryTextHoverColor: neutral[600]!,
   secondaryTextColor: neutral[600]!,
-  primaryBackgroundColor: neutral[200],
+  primaryBackgroundColor: neutral[300],
   secondaryBackgroundColor: neutral[100],
   primaryFont,
 };
