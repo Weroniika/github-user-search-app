@@ -11,7 +11,7 @@ type SearchContextType = {
 const SearchContext = createContext<SearchContextType | null>(null);
 
 export const SearchProvider = ({ children }: { children: React.ReactNode }) => {
-  const [username, setUsername] = useState<string>("");
+  const [username, setUsername] = useState<string>("Octocat");
   const url = username && `https://api.github.com/users/${username}`;
   const state = useFetch<ApiResponse>(url);
 
