@@ -1,12 +1,11 @@
 import { createContext, useContext, useState } from "react";
-import { darkTheme } from "../utils/themes";
 
 type ThemeContextType = {
   isDarkMode: boolean;
   toggleIsDarkMode?: () => void;
 };
 
-const ThemeContext = createContext<ThemeContextType>({ isDarkMode: false });
+const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
@@ -23,6 +22,6 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 export const useThemeContext = () => {
   const context = useContext(ThemeContext);
   if (!context)
-    throw new Error("Theme context must be used within a SliderProvider");
+    throw new Error("Theme context must be used within a ThemeProvider");
   return context;
 };
