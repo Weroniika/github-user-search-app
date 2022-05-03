@@ -18,7 +18,7 @@ export const UserCardWrapper = styled.section`
   grid-column-gap: 1.2188rem;
 
   @media only screen and (min-width: 48rem) {
-    padding-bottom: 30rem;
+    padding: 2.75rem 3rem 30rem;
   }
 
   @media only screen and (min-width: 90rem) {
