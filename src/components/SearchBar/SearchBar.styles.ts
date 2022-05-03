@@ -49,8 +49,7 @@ export const SearchError = styled.span`
 `;
 
 export const SearchInput = styled.input`
-  max-width: 12rem;
-  width: 100%;
+  width: 12rem;
   border: none;
   background-color: transparent;
   font-size: 0.8125rem;
@@ -66,7 +65,7 @@ export const SearchInput = styled.input`
 
   @media only screen and (min-width: 48rem) {
     font-size: 1.125rem;
-    max-width: 16.4375rem;
+    width: 16.4375rem;
 
     &::placeholder {
       font-size: 1.125rem;

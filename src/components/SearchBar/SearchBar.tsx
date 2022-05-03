@@ -30,6 +30,7 @@ export const SearchBar = () => {
         <SC.SearchInput
           onChange={onChange}
           placeholder="Search Github username  "
+          value={input}
         />
       </SC.SearchInputWrapper>
       <SC.SearchButtonWrapper>
