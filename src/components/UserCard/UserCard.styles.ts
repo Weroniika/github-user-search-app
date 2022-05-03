@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { typeScale } from "../../utils/typography";
 
 export const UserCardWrapper = styled.section`
@@ -17,11 +17,16 @@ export const UserCardWrapper = styled.section`
     "userdetails userdetails";
   grid-column-gap: 1.2188rem;
 
+  @media only screen and (min-width: 48rem) {
+    padding-bottom: 30rem;
+  }
+
   @media only screen and (min-width: 90rem) {
     grid-template-areas:
       "avatar userinfo"
       "avatar userdetails";
     grid-column-gap: 2.3125rem;
+    padding-bottom: 3rem;
   }
 `;
 
@@ -168,18 +173,19 @@ export const UserContact = styled.ul`
 export const ContactItem = styled.li`
   margin-bottom: 1.0625rem;
 
-  &:first-child {
-    span {
-      margin-left: 1.2031rem;
+  span {
+    &:first-of-type {
+      span {
+        margin-left: 1.195rem;
+      }
     }
   }
 `;
 
-export const ContactItemLink = styled.a`
+export const ContactItemStyle = css`
   font-size: ${typeScale.header3};
   line-height: 1.1875rem;
   display: flex;
-  // width: 100%;
   justify-content: flex-start;
 
   span {
@@ -187,9 +193,25 @@ export const ContactItemLink = styled.a`
   }
 
   svg {
+    width: auto;
     path {
       fill: ${(props) => props.theme.primaryTextColor};
     }
+  }
+`;
+
+export const ContactItemText = styled.span`
+  ${ContactItemStyle}
+`;
+
+export const ContactItemLink = styled.a`
+  ${ContactItemStyle};
+
+  color: ${(props) => props.theme.secondaryTextColor};
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 `;
 
@@ -197,4 +219,15 @@ export const ContactItemLinkDisabled = styled(ContactItemLink)`
   mix-blend-mode: normal;
   opacity: 0.5;
   cursor: not-allowed;
+
+  &:hover {
+    text-decoration: none;
+  }
+`;
+
+export const UserCardLoader = styled.span`
+  font-size: ${typeScale.header3};
+  font-weight: 400;
+  line-height: 1.1875rem;
+  color: ${(props) => props.theme.secondaryTextColor};
 `;

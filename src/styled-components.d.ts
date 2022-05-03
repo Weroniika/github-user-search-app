@@ -1,5 +1,4 @@
 import "styled-components";
-
 declare module "styled-components" {
   export interface DefaultTheme {
     primaryColor: string;
@@ -11,7 +10,6 @@ declare module "styled-components" {
     secondaryBackgroundColor: string;
     primaryFont: string;
   }
-
   export interface DarkTheme {
     primaryColor: string;
     primaryHoverColor: string;
